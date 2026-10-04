@@ -1,0 +1,69 @@
+<!doctype html>
+<html lang="de">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Fast geschafft – bitte bestätige deine Anmeldung</title>
+  <meta name="robots" content="noindex, nofollow">
+  <meta name="theme-color" content="#5e8292">
+  <meta name="color-scheme" content="light">
+  <script>document.documentElement.className += " js";</script>
+  <link rel="icon" href="/assets/img/favicon.svg" type="image/svg+xml">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,500;0,600;1,500&family=Great+Vibes&family=Questrial&display=swap">
+  <link rel="stylesheet" href="/assets/styles.css">
+</head>
+<body>
+
+<header class="topbar">
+  <div class="wrap topbar__inner">
+    <span class="brand">Rücken<span class="brand__accent">bewusst</span>SEIN</span>
+  </div>
+</header>
+
+<main class="thanks">
+  <div class="wrap narrow center">
+    <p class="eyebrow">Kostenfreier Online-Abendkurs</p>
+    <h1>Fast geschafft!</h1>
+    <p class="lead" style="margin:0 auto">Bitte bestätige jetzt deine Anmeldung. Erst dann ist dein Platz gesichert.</p>
+
+    <ol class="steps">
+      <li>Öffne dein E-Mail-Postfach. Ich habe dir gerade eine E-Mail geschickt.</li>
+      <li>Klicke in der E-Mail auf den Bestätigungslink.</li>
+      <li>Keine E-Mail da? Schau bitte auch im Spam- oder Werbe-Ordner nach.</li>
+    </ol>
+
+    <p><strong>Termin:</strong> <span class="js-termin">25.–27. Oktober 2026, jeweils 19:00 Uhr</span>, live und online.<br>Den Zugangslink bekommst du rechtzeitig per E-Mail.</p>
+    <p class="accent-script">Ich freue mich auf dich.</p>
+  </div>
+</main>
+
+<footer class="footer">
+  <div class="wrap">
+    <p class="footer__disclaimer">Der Abendkurs vermittelt einen ganzheitlichen Ansatz zur bewussten Betrachtung des eigenen Rückenproblems und ersetzt keine medizinische Diagnose oder Behandlung.</p>
+    <nav class="footer__links" aria-label="Rechtliches">
+      <a href="https://mein.rueckenbewusst-sein.de/impressum">Impressum</a>
+      <a href="https://mein.rueckenbewusst-sein.de/datenschutzerklaerung/">Datenschutz</a>
+      <button type="button" class="linklike js-consent-open">Cookie-Einstellungen</button>
+    </nav>
+  </div>
+</footer>
+
+<div class="consent" id="consent" hidden role="dialog" aria-labelledby="consent-title" aria-modal="false">
+  <p id="consent-title" class="consent__title">Darf ich Cookies verwenden?</p>
+  <p>Ich nutze den Meta Pixel, um zu verstehen, ob meine Anzeigen dich erreichen. Das geschieht nur mit deiner Zustimmung. Mehr in der <a href="https://mein.rueckenbewusst-sein.de/datenschutzerklaerung/" target="_blank" rel="noopener">Datenschutzerklärung</a>.</p>
+  <div class="consent__actions">
+    <button type="button" class="btn btn--ghost js-consent-deny">Nur notwendige</button>
+    <button type="button" class="btn btn--small js-consent-accept">Alle akzeptieren</button>
+  </div>
+</div>
+
+<script src="/assets/tracking.js"></script>
+<script>
+  // Lead nur, wenn die Landingpage gerade eine erfolgreiche Anmeldung gemeldet hat.
+  // Neu laden, Zurück-Taste oder direkter Aufruf zählen keinen weiteren Lead.
+  window.AK && window.AK.trackLeadOnce();
+</script>
+</body>
+</html>
