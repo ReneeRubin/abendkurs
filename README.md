@@ -8,7 +8,7 @@ Online-Abendkurs. Einziges Ziel: Anmeldung über das bestehende Brevo-Formular.
 | Datei | Zweck |
 | --- | --- |
 | `index.html` | Landingpage |
-| `danke-abendkurs/index.html` | Danke-Seite, feuert den Meta-Lead einmal |
+| `ty1/index.html` | Danke-Seite, feuert den Meta-Lead einmal |
 | `assets/styles.css` | Design (Petrol, Mittelblau, Pink; Century Gothic/Questrial, Cormorant Garamond, Great Vibes) |
 | `assets/tracking.js` | UTM sichern, Cookie-Einwilligung, Meta Pixel, Lead-Logik |
 | `assets/main.js` | CTA-Sprung, Sticky-CTA (mobil), Animationen, Formularversand an Brevo |
@@ -17,7 +17,7 @@ Online-Abendkurs. Einziges Ziel: Anmeldung über das bestehende Brevo-Formular.
 ## Tracking-Logik
 
 - **PageView** auf beiden Seiten, nur nach Zustimmung im Cookie-Banner.
-- **Lead** nur auf `/danke-abendkurs/`, nur wenn die Landingpage direkt davor
+- **Lead** nur auf `/ty1/` (gleicher Pfad wie Renées bisherige Conversion-Regel), nur wenn die Landingpage direkt davor
   eine erfolgreiche Brevo-Antwort bekommen hat (Einmal-Merkzeichen in
   `sessionStorage`, mit `eventID`). Neu laden oder Direktaufruf zählt nicht.
 - Keine Formulardaten, keine Gesundheitsinformationen an Meta;
@@ -31,18 +31,15 @@ Online-Abendkurs. Einziges Ziel: Anmeldung über das bestehende Brevo-Formular.
 
 ## Vor dem Go-live (TODO)
 
-1. Echte Fotos ablegen: `assets/img/renee-hero.jpg` (Hero) und
-   `assets/img/renee-portrait.jpg` (Über mich), Teilen-Bild
-   `assets/img/og-abendkurs.jpg` (1200 × 630). Die Dateien im Repo sind Platzhalter.
-2. Brevo: Formular-`action` in `index.html` mit dem HTML-Embed-Code des
-   Abendkurs-Formulars abgleichen; Nachname im Formular auf optional stellen.
-3. Termin prüfen (alle Stellen mit Klasse `js-termin`).
-4. Datenschutzerklärung um Meta Pixel und Cookie-Einwilligung ergänzen.
-5. Cloudflare Pages: Projekt mit diesem Repo verbinden, Build-Befehl leer,
+1. Empfehlung: In Brevo das reCAPTCHA im Abendkurs-Formular abschalten (weniger Hürde,
+   kein Google-Skript). Dann in `assets/main.js` `RECAPTCHA_SITEKEY = ""` setzen.
+   Bleibt es an, muss reCAPTCHA in der Datenschutzerklärung stehen.
+2. Datenschutzerklärung um Meta Pixel und Cookie-Einwilligung ergänzen.
+3. Cloudflare Pages: Projekt mit diesem Repo verbinden, Build-Befehl leer,
    Ausgabeverzeichnis `/`. Danach Subdomain (z. B.
    `abendkurs.rueckenbewusst-sein.de`) per CNAME bei Alfahosting eintragen
-   und `og:image`-URL anpassen.
-6. Testanmeldung: Danke-Seite erscheint, im Meta Events Manager
+   und die `og:image`-URL in `index.html` darauf anpassen.
+4. Testanmeldung: Danke-Seite `/ty1/` erscheint, im Meta Events Manager
    (Testereignisse) genau ein Lead, Double-Opt-In-Mail kommt an.
 
 ## Lokal ansehen

@@ -2,7 +2,10 @@
 (function () {
   "use strict";
 
-  var THANK_YOU_PATH = "/danke-abendkurs/";
+  var THANK_YOU_PATH = "/ty1/";
+  // reCAPTCHA-Schlüssel aus Renées Brevo-Formular. Wird in Brevo das Captcha
+  // abgeschaltet, hier "" eintragen: dann lädt kein Google-Skript mehr.
+  var RECAPTCHA_SITEKEY = "6LecINsqAAAAABM7tct-vozHDMfLgM0wHr87d6li";
 
   /* ---------- Reveal ---------- */
   var revealEls = document.querySelectorAll(".reveal");
@@ -49,6 +52,30 @@
 
   /* ---------- Brevo-Formular ---------- */
   if (!form) return;
+
+  /* reCAPTCHA erst laden, wenn die Besucherin das Formular erreicht (spart Ladezeit) */
+  var captchaBox = document.getElementById("f-captcha");
+  var captchaId = null, captchaRequested = false;
+  window.akCaptchaReady = function () {
+    if (!captchaBox || !window.grecaptcha) return;
+    captchaBox.hidden = false;
+    captchaId = window.grecaptcha.render(captchaBox, { sitekey: RECAPTCHA_SITEKEY, hl: "de" });
+  };
+  function loadCaptcha() {
+    if (!RECAPTCHA_SITEKEY || captchaRequested) return;
+    captchaRequested = true;
+    var sc = document.createElement("script");
+    sc.src = "https://www.google.com/recaptcha/api.js?onload=akCaptchaReady&render=explicit&hl=de";
+    sc.async = true;
+    document.head.appendChild(sc);
+  }
+  if (RECAPTCHA_SITEKEY) {
+    form.addEventListener("focusin", loadCaptcha);
+    if ("IntersectionObserver" in window) {
+      var cio = new IntersectionObserver(function (e) { if (e[0].isIntersecting) { loadCaptcha(); cio.disconnect(); } }, { rootMargin: "400px" });
+      cio.observe(form);
+    } else { loadCaptcha(); }
+  }
   var msg = form.querySelector(".form__msg");
   var button = form.querySelector('button[type="submit"]');
   var buttonText = button.textContent;
@@ -80,6 +107,10 @@
     if (!vorname.value) return setError("Bitte gib deinen Vornamen ein.", vorname);
     if (!EMAIL_RE.test(email.value)) return setError("Bitte prüfe deine E-Mail-Adresse.", email);
     if (!optin.checked) return setError("Bitte bestätige die Einwilligung, damit ich dir die Kursinformationen schicken darf.", optin);
+    if (RECAPTCHA_SITEKEY) {
+      if (captchaId === null) { loadCaptcha(); return setError("Einen Moment bitte, die Sicherheitsabfrage lädt noch."); }
+      if (!window.grecaptcha.getResponse(captchaId)) return setError("Bitte bestätige kurz die Sicherheitsabfrage („Ich bin kein Roboter“).");
+    }
 
     // Honeypot gefüllt = Bot: so tun als ob, nichts senden, keinen Lead zählen.
     if (form.elements.email_address_check.value) { window.location.href = THANK_YOU_PATH; return; }
@@ -102,6 +133,7 @@
           button.disabled = false;
           button.textContent = buttonText;
           setError("Deine Anmeldung konnte nicht gespeichert werden. Bitte versuche es erneut.");
+          if (captchaId !== null) window.grecaptcha.reset(captchaId);
         }
       })
       .catch(function () {

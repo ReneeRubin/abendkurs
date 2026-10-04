@@ -4,5 +4,5 @@
   Permissions-Policy: camera=(), microphone=(), geolocation=()
 /assets/*
   Cache-Control: public, max-age=86400
-/danke-abendkurs/*
+/ty1/*
   X-Robots-Tag: noindex

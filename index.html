@@ -43,16 +43,16 @@
     <div class="wrap hero__grid">
       <div class="hero__text">
         <p class="eyebrow">
-          <img class="hero__avatar" src="/assets/img/renee-hero.jpg" alt="" width="56" height="56">
+          <img class="hero__avatar" src="/assets/img/renee-avatar.jpg" alt="" width="48" height="48">
           Kostenfreier Online-Abendkurs
         </p>
         <h1>Warum kommt dein Rückenproblem immer wieder?</h1>
         <p class="lead">Mit deinem bewussten Blick auf dein Rückenproblem erkennst du die Zusammenhänge, die du bisher vielleicht noch nicht gesehen hast.</p>
         <a class="btn" href="#anmeldung" data-cta="hero" id="hero-cta">Jetzt meinen kostenfreien Platz sichern</a>
-        <p class="microline">Kostenfrei · online · live · <span class="js-termin">25.–27. Oktober 2026, jeweils 19:00 Uhr</span></p>
+        <p class="microline">Kostenfrei · online · live · <span class="js-termin">25.–27. Oktober 2026, jeweils 19:00–20:30 Uhr</span></p>
       </div>
       <figure class="hero__image">
-        <img src="/assets/img/renee-hero.jpg" alt="Renée mit offenen Händen, zugewandt und lächelnd" width="900" height="1100" fetchpriority="high">
+        <img src="/assets/img/renee-hero.jpg" alt="Renée lächelt und reicht dir einladend die Hand" width="900" height="1349" fetchpriority="high">
         <svg class="hero__doorline" viewBox="0 0 120 200" aria-hidden="true"><path d="M10 195V60a50 50 0 0 1 100 0v135" /></svg>
       </figure>
     </div>
@@ -251,7 +251,7 @@
   <section class="section" id="renee">
     <div class="wrap about">
       <figure class="about__image">
-        <img src="/assets/img/renee-portrait.jpg" alt="Porträt von Renée" width="800" height="1000" loading="lazy">
+        <img src="/assets/img/renee-portrait.jpg" alt="Renée sitzt am Strand, eine Hand auf dem Herzen, und blickt aufs Meer" width="800" height="1199" loading="lazy">
       </figure>
       <div class="about__text">
         <p class="eyebrow">Über mich</p>
@@ -300,6 +300,9 @@
 
   <!-- 11 ZUKUNFTSBILD -->
   <section class="section section--future">
+    <figure class="future__image wrap">
+      <img src="/assets/img/renee-weite.jpg" alt="Renée am Strand mit weit geöffneten Armen" width="1600" height="1067" loading="lazy">
+    </figure>
     <div class="wrap narrow center">
       <h2 class="display">Stell dir vor, dein Rücken würde nicht mehr bestimmen, was du dir zutraust.</h2>
       <ul class="future-list reveal">
@@ -323,8 +326,8 @@
         <p>Du erfährst, warum es sinnvoll sein kann, nicht nur einen Raum zu betrachten – sondern das gesamte Bild.</p>
         <p class="accent-script">Nimm dir diese Zeit für dich.</p>
         <dl class="facts">
-          <div><dt>Wann</dt><dd class="js-termin">25.–27. Oktober 2026, jeweils 19:00 Uhr</dd></div>
-          <div><dt>Wo</dt><dd>Online, live – bequem von zu Hause</dd></div>
+          <div><dt>Wann</dt><dd class="js-termin">25.–27. Oktober 2026, jeweils 19:00–20:30 Uhr</dd></div>
+          <div><dt>Wo</dt><dd>Online und live in meiner Facebook-Gruppe – bequem von zu Hause</dd></div>
           <div><dt>Kosten</dt><dd>Kostenfrei</dd></div>
         </dl>
       </div>
@@ -332,8 +335,8 @@
       <div class="signup__card">
         <p class="signup__cardtitle">Sichere dir deinen kostenfreien Platz</p>
         <form id="signup-form" class="form" method="POST" novalidate
-              action="https://5cc45ce8.sibforms.com/serve/MUIFAFK8q7iYOmigDTXv9z2GJU2PHOWT96ETjmJmS6GOXMH2cWmPZEKd3z3i9Ms7MrRVkT96-a8ahBsS4zY3hijKnkBxLKE5ilJJwr_2wPhBLBuOfxDc_kJ3MMNUzsvkTi_OHA2oA_y7pWMZ046l-VpMSZj3YQx_E42810_4dI8Ejas2V9Y2LQ4v5XnLShNaXdKtUgIFOW9VRVSG">
-          <!-- TODO: action exakt aus dem Brevo-HTML-Embed-Code übernehmen (Brevo → Formulare → Teilen → HTML) -->
+              action="https://5cc45ce8.sibforms.com/serve/MUIFAKistWKfCndiYR3T5h8tdyvIICWpw-dJ9rTFVKX9MHRguc-LLZ7PSGYJR43Jqhue55c494JwN8YWXU6KenA45vpKUPc_dVyGKKN2QXzF2_dsChzx7ITiv0RgILFvyf14d3awFHCgHt-aSEH2cENEqODDrfSmGZOhkgcWEWD0FeAr_2ToIXqut1fsLtvLZDzPSN0rXOjxektz">
+          <!-- Brevo-Formular "Abendkurs" (aus Renées Embed-Code, 04.10.2026). Felder: VORNAME, EMAIL, OPT_IN; NACHNAME optional, hier weggelassen. -->
           <div class="field">
             <label for="f-vorname">Vorname</label>
             <input id="f-vorname" name="VORNAME" type="text" autocomplete="given-name" required maxlength="60">
@@ -346,6 +349,8 @@
             <input id="f-optin" name="OPT_IN" type="checkbox" value="1" required>
             <label for="f-optin">Ich möchte meinen Platz kostenfrei reservieren, Informationen per E-Mail erhalten und akzeptiere die <a href="https://mein.rueckenbewusst-sein.de/datenschutzerklaerung/" target="_blank" rel="noopener">Datenschutzerklärung</a>.</label>
           </div>
+          <!-- reCAPTCHA aus dem Brevo-Formular; wird erst bei Interaktion geladen (siehe main.js) -->
+          <div class="field field--captcha" id="f-captcha" hidden></div>
           <!-- Brevo-Honeypot und Sprache, wie im Brevo-Embed -->
           <input class="hp" type="text" name="email_address_check" value="" tabindex="-1" autocomplete="off" aria-hidden="true">
           <input type="hidden" name="locale" value="de">
@@ -377,7 +382,7 @@
         </details>
         <details>
           <summary>Wie läuft der Abendkurs ab?</summary>
-          <p>Der Abendkurs findet live und online an drei Abenden statt (<span class="js-termin">25.–27. Oktober 2026, jeweils 19:00 Uhr</span>). Nach deiner Anmeldung bekommst du per E-Mail alle Informationen und den Zugangslink.</p>
+          <p>Der Abendkurs findet live und online an drei Abenden statt (<span class="js-termin">25.–27. Oktober 2026, jeweils 19:00–20:30 Uhr</span>). Wir treffen uns live in meiner Facebook-Gruppe. Nach deiner Anmeldung bekommst du den Link zur Gruppe und alle Informationen per E-Mail.</p>
         </details>
         <details>
           <summary>Ist die Teilnahme wirklich kostenfrei?</summary>
@@ -390,7 +395,7 @@
         </details>
         <details>
           <summary>Was passiert nach meiner Anmeldung?</summary>
-          <p>Du bekommst eine E-Mail mit einem Bestätigungslink. Sobald du ihn anklickst, ist dein Platz gesichert, und du erhältst rechtzeitig vor dem Kurs deinen Zugangslink.</p>
+          <p>Du bekommst eine E-Mail mit einem Bestätigungslink. Sobald du ihn anklickst, ist dein Platz gesichert. Danach trittst du meiner Facebook-Gruppe bei, dort findet der Abendkurs live statt.</p>
         </details>
       </div>
       <div class="center"><a class="btn" href="#anmeldung" data-cta="faq">Jetzt meinen kostenfreien Platz sichern</a></div>
