@@ -171,10 +171,20 @@ strong { font-weight: 700; }
 .keys svg { width: 56px; fill: none; stroke: var(--petrol); stroke-width: 2; stroke-linecap: round; transform: rotate(-35deg); }
 .keys svg:first-child { stroke: var(--pink); }
 
+/* ---------- Woher · Wo · Wohin ---------- */
+.compass { list-style: none; padding: 0; margin: 28px auto 12px; display: flex; justify-content: center; align-items: center; gap: 0; max-width: 460px; }
+.compass li { flex: 1; display: flex; align-items: center; }
+.compass li span { display: block; width: 100%; padding: 12px 6px; border: 1.5px solid var(--petrol); border-radius: 999px; font-family: var(--font-head); font-size: 1.35rem; font-weight: 600; color: var(--petrol-deep); text-align: center; }
+.compass li:not(:last-child)::after { content: ""; flex: 0 0 22px; height: 1.5px; background: var(--pink); }
+.compass li:last-child span { background: var(--petrol); color: #fff; }
+.compass__note { font-size: .95rem; color: var(--muted); margin-bottom: 28px; }
+.core-msg { margin: 1.4em 0; font-family: var(--font-head); font-size: 1.7rem; line-height: 1.3; color: var(--petrol-deep); font-style: italic; }
+
 /* ---------- Takeaways ---------- */
 .takeaways { list-style: none; padding: 0; margin: 32px 0; display: grid; gap: 18px; }
 .takeaways li { background: #fff; border-radius: var(--radius); padding: 28px 24px; border: 1px solid var(--line); box-shadow: var(--shadow); }
 .takeaways__no { display: block; font-family: var(--font-head); font-size: 2.6rem; color: var(--pink); line-height: 1; margin-bottom: 12px; }
+.takeaways__day { display: block; font-size: .78rem; font-weight: 700; letter-spacing: .14em; text-transform: uppercase; color: var(--petrol); margin-bottom: 10px; }
 .takeaways h3 { font-size: 1.4rem; }
 .takeaways p { margin: 0; color: var(--muted); }
 .takeaways__after p { font-size: 1.12rem; }
