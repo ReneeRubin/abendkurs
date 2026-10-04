@@ -9,7 +9,7 @@ Online-Abendkurs. Einziges Ziel: Anmeldung über das bestehende Brevo-Formular.
 | --- | --- |
 | `index.html` | Landingpage |
 | `ty1/index.html` | Danke-Seite, feuert den Meta-Lead einmal |
-| `assets/styles.css` | Design (Petrol, Mittelblau, Pink; Century Gothic/Questrial, Cormorant Garamond, Great Vibes) |
+| `assets/styles.css` | Design (Petrol, Mittelblau, Pink; Century Gothic/Questrial, Cormorant Garamond, Allura) |
 | `assets/tracking.js` | UTM sichern, Cookie-Einwilligung, Meta Pixel, Lead-Logik |
 | `assets/main.js` | CTA-Sprung, Sticky-CTA (mobil), Animationen, Formularversand an Brevo |
 | `_headers` | Cloudflare-Pages-Header (Caching, noindex für Danke-Seite) |
