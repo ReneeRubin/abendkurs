@@ -31,7 +31,7 @@
 <header class="topbar">
   <div class="wrap topbar__inner">
     <span class="brand">Rücken<span class="brand__accent">bewusst</span>SEIN</span>
-    <a class="topbar__cta" href="#anmeldung" data-cta="header">Kostenfrei dabei sein</a>
+    <a class="topbar__cta" href="#anmeldung" data-cta="header"><span class="hide-s">Kostenfrei </span>dabei sein</a>
   </div>
 </header>
 
@@ -112,31 +112,29 @@
     </div>
     <div class="wrap">
       <figure class="house reveal">
-        <svg viewBox="0 0 520 480" role="img" aria-labelledby="house-title">
-          <title id="house-title">Ein Haus mit sechs Räumen: Körper ist geöffnet. Gedanken, Gefühle, Energie, Lebenssituation und innere Ausrichtung sind noch verschlossen.</title>
-          <path class="house__outline" d="M14 152 L260 22 L506 152 M40 138 V462 H480 V138"/>
-          <line class="house__floor" x1="40" y1="300" x2="480" y2="300"/>
-          <!-- Obergeschoss -->
-          <g class="door door--closed" style="--d:1" transform="translate(82 166)"><path d="M0 84V28a28 28 0 0 1 56 0v56z"/><circle cx="44" cy="52" r="3.5"/></g>
-          <text class="door__label" style="--d:1" x="110" y="276">Gedanken</text>
-          <g class="door door--closed" style="--d:2" transform="translate(232 166)"><path d="M0 84V28a28 28 0 0 1 56 0v56z"/><circle cx="44" cy="52" r="3.5"/></g>
-          <text class="door__label" style="--d:2" x="260" y="276">Gefühle</text>
-          <g class="door door--closed" style="--d:3" transform="translate(382 166)"><path d="M0 84V28a28 28 0 0 1 56 0v56z"/><circle cx="44" cy="52" r="3.5"/></g>
-          <text class="door__label" style="--d:3" x="410" y="276">Energie</text>
-          <!-- Erdgeschoss -->
-          <g class="door door--open" style="--d:0" transform="translate(82 326)">
-            <path class="door__glow" d="M0 84V28a28 28 0 0 1 56 0v56z"/>
-            <path class="door__leaf" d="M0 84V28a28 28 0 0 1 18-26v92z"/>
+        <svg viewBox="0 0 640 470" role="img" aria-labelledby="house-title">
+          <title id="house-title">Ein Haus mit sieben Türen. Nur die Tür „Körper“ ist geöffnet, sechs weitere Türen sind noch verschlossen und haben ein Schlüsselloch.</title>
+          <path class="house__outline" d="M40 190 L320 30 L600 190 M80 168 V440 H560 V168"/>
+          <line class="house__floor" x1="80" y1="300" x2="560" y2="300"/>
+          <!-- Obergeschoss: 3 verschlossene Türen -->
+          <g class="door door--closed" style="--d:2" transform="translate(150 186)"><path d="M0 100V34a34 34 0 0 1 68 0v66z"/><path class="door__keyhole" d="M34 54a6 6 0 1 1-.01 0zM31 62h6l2.5 14h-11z"/></g>
+          <g class="door door--closed" style="--d:3" transform="translate(286 186)"><path d="M0 100V34a34 34 0 0 1 68 0v66z"/><path class="door__keyhole" d="M34 54a6 6 0 1 1-.01 0zM31 62h6l2.5 14h-11z"/></g>
+          <g class="door door--closed" style="--d:4" transform="translate(422 186)"><path d="M0 100V34a34 34 0 0 1 68 0v66z"/><path class="door__keyhole" d="M34 54a6 6 0 1 1-.01 0zM31 62h6l2.5 14h-11z"/></g>
+          <!-- Erdgeschoss: Körper offen + 3 verschlossene Türen -->
+          <g class="door door--open" style="--d:0" transform="translate(122 326)">
+            <path class="door__glow" d="M0 100V34a34 34 0 0 1 68 0v66z"/>
+            <path class="door__leaf" d="M0 100V34a34 34 0 0 1 22-32v108z"/>
           </g>
-          <text class="door__label door__label--open" style="--d:0" x="110" y="436">Körper</text>
-          <g class="door door--closed" style="--d:4" transform="translate(232 326)"><path d="M0 84V28a28 28 0 0 1 56 0v56z"/><circle cx="44" cy="52" r="3.5"/></g>
-          <text class="door__label" style="--d:4" x="260" y="436">Lebenssituation</text>
-          <g class="door door--closed" style="--d:5" transform="translate(382 326)"><path d="M0 84V28a28 28 0 0 1 56 0v56z"/><circle cx="44" cy="52" r="3.5"/></g>
-          <text class="door__label" style="--d:5" x="410" y="436"><tspan x="410">Innere</tspan><tspan x="410" dy="22">Ausrichtung</tspan></text>
+          <text class="door__label door__label--open" style="--d:0" x="156" y="462">KÖRPER</text>
+          <g class="door door--closed" style="--d:5" transform="translate(231 326)"><path d="M0 100V34a34 34 0 0 1 68 0v66z"/><path class="door__keyhole" d="M34 54a6 6 0 1 1-.01 0zM31 62h6l2.5 14h-11z"/></g>
+          <g class="door door--closed" style="--d:6" transform="translate(341 326)"><path d="M0 100V34a34 34 0 0 1 68 0v66z"/><path class="door__keyhole" d="M34 54a6 6 0 1 1-.01 0zM31 62h6l2.5 14h-11z"/></g>
+          <g class="door door--closed" style="--d:7" transform="translate(450 326)"><path d="M0 100V34a34 34 0 0 1 68 0v66z"/><path class="door__keyhole" d="M34 54a6 6 0 1 1-.01 0zM31 62h6l2.5 14h-11z"/></g>
         </svg>
       </figure>
     </div>
     <div class="wrap narrow center">
+      <p class="house__q">Doch was befindet sich hinter den anderen Türen?</p>
+      <p class="house__a">Dafür gibt es die 7 Schlüssel.</p>
       <p class="house__note">Das heißt nicht, dass dein Rücken „aus dem Kopf“ kommt. Es heißt: Wenn du verstehen willst, warum dein Rückenproblem immer wieder zum Thema wird, lohnt es sich, mehr als einen Raum zu betrachten.</p>
       <figure class="voice voice--onDark reveal">
         <blockquote>„Ich hätte nie gedacht, dass mein Rückenleiden auf mehreren Ebenen verwurzelt ist. […] Ich fühle mich aufrechter, klarer und so viel verbundener mit mir.“</blockquote>
@@ -161,9 +159,9 @@
         <svg viewBox="0 0 64 24" style="--k:5"><circle cx="10" cy="12" r="7"/><path d="M17 12h44M50 12v7M56 12v5"/></svg>
         <svg viewBox="0 0 64 24" style="--k:6"><circle cx="10" cy="12" r="7"/><path d="M17 12h44M50 12v7M56 12v5"/></svg>
       </div>
-      <p class="eyebrow">Mein Framework</p>
+      <p class="eyebrow">Meine Methode</p>
       <h2 class="display">Die 7 <span class="script">Schlüssel</span></h2>
-      <p>Aus über 25 Jahren Arbeit mit Körpern, Schmerz und Lebensgeschichten ist eine klare Struktur entstanden. Mit ihr betrachtest du dein persönliches Rückenproblem aus mehreren Perspektiven, Schritt für Schritt statt im Rätselraten.</p>
+      <p>Aus über 25 Jahren Arbeit mit Körpern, Schmerz und Lebensgeschichten ist eine klare Struktur entstanden. Mit ihr betrachtest du dein persönliches Rückenthema bewusst auf mehreren Ebenen. Schritt für Schritt, mit einem klaren Plan statt im Rätselraten.</p>
       <ol class="compass" aria-label="Die Logik der 7 Schlüssel">
         <li><strong>Woher?</strong><span>Was spielt bei dir hinein?</span></li>
         <li><strong>Wo?</strong><span>Auf welchen Ebenen zeigt es sich?</span></li>
@@ -181,21 +179,21 @@
       <ol class="journey">
         <li class="reveal">
           <p class="journey__day">Abend 1 · So, 25. Oktober</p>
-          <h3>Erkennen</h3>
+          <h3>Erkennen &amp; entschlüsseln</h3>
           <p class="journey__q">Warum kommt mein Rückenproblem immer wieder?</p>
-          <p>Du schaust auf deine bisherige Sichtweise und erkennst, wo du vielleicht nur einen Raum betrachtet hast.</p>
+          <p>Du erkennst: So, wie du bisher auf deinen Schmerz geschaut hast, kommst du möglicherweise nicht weiter. Und du beginnst, die Information hinter dem Schmerz zu entschlüsseln.</p>
         </li>
         <li class="reveal">
           <p class="journey__day">Abend 2 · Mo, 26. Oktober</p>
-          <h3>Verstehen</h3>
-          <p class="journey__q">Welche Zusammenhänge könnten dahinter liegen?</p>
-          <p>Du lernst die 7 Schlüssel kennen und erkennst, welche Räume bei dir eine Rolle spielen können.</p>
+          <h3>Bewusst verstehen</h3>
+          <p class="journey__q">Womit ist mein Rücken noch verbunden?</p>
+          <p>Du siehst: Es gibt mehrere Ebenen und Zusammenhänge, und dafür braucht es einen anderen Blick. Mit den 7 Schlüsseln verstehst du endlich, womit dein Rücken noch verbunden ist.</p>
         </li>
         <li class="reveal">
           <p class="journey__day">Abend 3 · Di, 27. Oktober</p>
-          <h3>Ausrichten</h3>
-          <p class="journey__q">Was brauche ich, damit aus Erkenntnis Veränderung werden kann?</p>
-          <p>Du gehst mit deinem persönlichen nächsten Schritt aus dem Kurs.</p>
+          <h3>Rücken ausrichten</h3>
+          <p class="journey__q">Wie setze ich das für mich um?</p>
+          <p>Du weißt jetzt, worum es bei dir geht. Jetzt brauchst du einen Weg, das für dich umzusetzen. Ich zeige dir, wie dieser Weg aussehen kann und wie ich dich dabei begleiten kann.</p>
         </li>
       </ol>
       <p class="accent-line">Jeder Abend baut auf dem vorherigen auf. Plane dir am besten alle drei ein. Das ist kein Abend mit ein paar netten Impulsen. Es ist der rote Faden, der dir vielleicht bisher gefehlt hat.</p>
@@ -214,25 +212,29 @@
   <section class="section" id="renee">
     <div class="wrap about">
       <figure class="about__image">
-        <img src="/assets/img/renee-portrait.jpg" alt="Renée sitzt am Strand, eine Hand auf dem Herzen, und blickt aufs Meer" width="800" height="1199" loading="lazy">
+        <img src="/assets/img/renee-portrait.jpg" alt="Renée hockt barfuß am Strand, eine Hand auf dem Herzen, und schaut dich an" width="800" height="1199" loading="lazy">
       </figure>
       <div class="about__text">
         <p class="eyebrow">Über mich</p>
         <h2>Warum ich anders auf deinen Rücken schaue</h2>
-        <p>Ich bin Renée Rubin, Expertin für Rücken<span class="brand__accent">bewusst</span>SEIN. Seit über 25 Jahren beschäftige ich mich mit Bewegung, Körper, Schmerz und Wohlbefinden.</p>
+        <p>Ich bin Renée Rubin, Expertin für Rücken<span class="brand__accent">bewusst</span>SEIN. Seit über 17 Jahren beschäftige ich mich mit Rückenthemen und ihrer Verbindung zum Leben.</p>
         <div class="combo">
           <div>
             <p class="combo__title">Ich komme vom Körper</p>
-            <p>Medizinische Trainingstherapie, Sporttherapie in der Reha, Anatomie, Yoga, Beckenboden</p>
+            <p>Medizinische Trainingstherapie, Sporttherapie in der Reha, Trainerin in Mutter-Kind-Kuren, Familienzentren und beim NDR</p>
           </div>
           <div>
             <p class="combo__title">Und ich kenne, was der Körper allein nicht erklärt</p>
-            <p>Atemarbeit, Coaching, Embodiment, Energiearbeit</p>
+            <p>Atemarbeit, Coaching, Embodiment, Energiearbeit, Emotional-Release-Mentorin, Multidimensional Causal Coach</p>
+          </div>
+          <div>
+            <p class="combo__title">Daraus habe ich entwickelt</p>
+            <p>Pionierin des Rückenheil Code (multidimensionale Codierungstechnik), Entwicklerin des DIMENSIONALEN Trainings, Mentorin der Community Rückenheldinnen</p>
           </div>
         </div>
         <p>In meiner Arbeit mit Frauen sehe ich immer wieder: Wer nur auf den Körper schaut, übersieht manchmal das Entscheidende. Wer nur auf Gedanken und Gefühle schaut, verliert den Körper aus dem Blick.</p>
         <p>Genau deshalb habe ich meinen multidimensionalen Ansatz entwickelt. Er verbindet beides, damit du dein Rückenproblem nicht nur bearbeitest, sondern verstehst.</p>
-        <p class="small">Als Coach im NDR (2019) · Studium in Bozen und London</p>
+        <p class="small">Studium in Bozen und London</p>
         <figure class="voice voice--small reveal">
           <blockquote>„Sie ist nicht nur eine Rückenexpertin, sondern auch eine tiefgehende Persönlichkeit.“</blockquote>
           <figcaption>Jennifer Z., Bauleiterin aus Zürich</figcaption>

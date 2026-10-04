@@ -159,11 +159,13 @@ h2 { text-wrap: balance; }
 .house__outline { fill: none; stroke: rgba(255,255,255,.75); stroke-width: 2.5; stroke-linejoin: round; stroke-linecap: round; }
 .house__floor { stroke: rgba(255,255,255,.25); stroke-width: 1.5; }
 .door path, .door circle { fill: none; stroke: rgba(255,255,255,.75); stroke-width: 2; }
-.door--closed circle { fill: rgba(255,255,255,.75); stroke: none; }
+.door__keyhole { fill: var(--blau) !important; stroke: none !important; }
 .door__glow { fill: var(--blau) !important; stroke: #fff !important; filter: drop-shadow(0 0 18px rgba(143, 201, 203, .9)); }
 .door__leaf { fill: var(--petrol-deep) !important; stroke: #fff !important; }
-.door__label { fill: rgba(255,255,255,.78); font-family: var(--font-body); font-size: 20px; text-anchor: middle; }
+.door__label { fill: #fff; font-family: var(--font-body); font-size: 22px; font-weight: 700; letter-spacing: .2em; text-anchor: middle; }
 .door__label--open { fill: #fff; font-weight: 700; }
+.house__q { font-family: var(--font-head); font-size: clamp(1.6rem, 4.6vw, 2.3rem); line-height: 1.25; color: #fff !important; margin-bottom: .2em; }
+.house__a { font-family: var(--font-script); font-size: 2.6rem; line-height: 1.2; color: var(--blau) !important; margin-bottom: 1em; }
 .house__note { font-family: var(--font-head); font-style: italic; font-size: clamp(1.3rem, 3.8vw, 1.55rem); line-height: 1.4; color: #fff !important; }
 
 /* ---------- Keys ---------- */
@@ -199,7 +201,7 @@ h2 { text-wrap: balance; }
 .combo p { margin: 0; }
 .combo__title { font-weight: 700; color: var(--petrol-deep); margin-bottom: 4px !important; }
 .small { font-size: .9rem; color: var(--muted); }
-@media (min-width: 600px) { .combo { grid-template-columns: 1fr 1fr; } }
+
 @media (min-width: 900px) { .about { grid-template-columns: .85fr 1.15fr; gap: 72px; } }
 
 /* ---------- Stimmen (einzeln platziert) ---------- */
@@ -310,3 +312,4 @@ h2 { text-wrap: balance; }
 .thanks__avatar { width: 96px; height: 96px; border-radius: 50%; object-fit: cover; margin: 0 auto 20px; border: 3px solid #fff; box-shadow: var(--shadow); }
 .thanks__btn { margin-top: 14px; }
 .thanks__facts { text-align: left; margin-bottom: 24px; }
+@media (max-width: 400px) { .hide-s { display: none; } }
