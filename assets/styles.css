@@ -386,3 +386,7 @@ h2 { text-wrap: balance; }
 .you-are--detail li { font-family: inherit; font-size: inherit; line-height: 1.5; padding: 14px 18px; border-left: 3px solid var(--blau); background: rgba(255,255,255,.08); border-radius: 0 12px 12px 0; }
 .you-are--detail strong { display: block; font-family: var(--font-head); font-size: clamp(1.35rem, 4vw, 1.6rem); font-weight: 600; line-height: 1.25; margin-bottom: 4px; color: #fff; }
 .you-are--detail span { color: rgba(255,255,255,.9); }
+.hero__eyebrow { display: block; }
+.hero__eyebrow::before { display: none; }
+.hero__eyebrow strong { display: block; margin-top: 2px; font-size: 1.15rem; color: var(--pink); }
+@media (max-width: 420px) { .hero__eyebrow span { font-size: .86rem; } }
