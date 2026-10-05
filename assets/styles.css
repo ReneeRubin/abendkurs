@@ -369,3 +369,15 @@ h2 { text-wrap: balance; }
 .consent__opt strong { display: block; color: var(--ink); }
 .consent__opt span { font-size: .85rem; color: var(--muted); line-height: 1.4; }
 .keys__claim { font-size: 1.15em; color: var(--petrol-deep); margin-top: 1.4em; }
+
+/* Was Du mitnimmst / Was wäre, wenn */
+.gains { list-style: none; counter-reset: g; padding: 0; margin: 24px 0 0; display: grid; gap: 16px; }
+.gains li { counter-increment: g; position: relative; background: #fff; border: 1px solid var(--line); border-radius: var(--radius); padding: 22px 22px 18px 76px; }
+.gains li::before { content: counter(g); position: absolute; left: 20px; top: 20px; width: 40px; height: 40px; border-radius: 50%; background: var(--blau); color: #fff; font-family: var(--font-head); font-weight: 600; font-size: 1.4rem; display: grid; place-items: center; }
+.gains h3 { margin: 0 0 .35em; font-size: 1.3rem; line-height: 1.3; }
+.gains p { margin: 0; }
+.whatif { list-style: none; padding: 0; margin: 20px 0 0; display: grid; gap: 12px; }
+.whatif li { position: relative; padding: 14px 18px 14px 44px; border-left: 3px solid var(--pink); background: var(--bg-soft); border-radius: 0 12px 12px 0; font-family: var(--font-head); font-style: italic; font-size: 1.3rem; line-height: 1.35; color: var(--petrol-deep); }
+.whatif li::before { content: "…"; position: absolute; left: 16px; top: 12px; color: var(--pink); font-style: normal; }
+@media (max-width: 420px) { .gains li { padding: 72px 18px 18px; } .gains li::before { top: 18px; left: 18px; } }
+.compass span strong { font-family: inherit; font-size: inherit; font-weight: 700; color: inherit; }
