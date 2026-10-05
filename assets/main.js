@@ -5,7 +5,7 @@
   var THANK_YOU_PATH = "/ty1/";
   // reCAPTCHA-Schlüssel aus Renées Brevo-Formular. Wird in Brevo das Captcha
   // abgeschaltet, hier "" eintragen: dann lädt kein Google-Skript mehr.
-  var RECAPTCHA_SITEKEY = "6LecINsqAAAAABM7tct-vozHDMfLgM0wHr87d6li";
+  var RECAPTCHA_SITEKEY = ""; // in Brevo abgeschaltet (Renée, 05.10.2026)
 
   /* ---------- Reveal ---------- */
   var revealEls = document.querySelectorAll(".reveal");

@@ -31,7 +31,7 @@ Online-Abendkurs. Einziges Ziel: Anmeldung über das bestehende Brevo-Formular.
 
 ## Vor dem Go-live (TODO)
 
-1. Empfehlung: In Brevo das reCAPTCHA im Abendkurs-Formular abschalten (weniger Hürde,
+1. reCAPTCHA ist in Brevo abgeschaltet (05.10.2026), `RECAPTCHA_SITEKEY = ""` gesetzt.
    kein Google-Skript). Dann in `assets/main.js` `RECAPTCHA_SITEKEY = ""` setzen.
    Bleibt es an, muss reCAPTCHA in der Datenschutzerklärung stehen.
 2. Datenschutzerklärung um Meta Pixel und Cookie-Einwilligung ergänzen.
