@@ -58,9 +58,13 @@
 <div class="consent" id="consent" hidden role="dialog" aria-labelledby="consent-title" aria-modal="false">
   <p id="consent-title" class="consent__title">Darf ich Cookies verwenden?</p>
   <p>Ich nutze den Meta Pixel, um zu verstehen, ob meine Anzeigen Dich erreichen. Das geschieht nur mit Deiner Zustimmung. Mehr in der <a href="https://mein.rueckenbewusst-sein.de/datenschutzerklaerung/" target="_blank" rel="noopener">Datenschutzerklärung</a>.</p>
+  <div class="consent__settings" id="consent-settings" hidden>
+    <label class="consent__opt"><input type="checkbox" checked disabled><span><strong>Notwendig</strong>Speichert Deine Cookie-Auswahl. Immer aktiv.</span></label>
+    <label class="consent__opt" for="consent-marketing"><input type="checkbox" id="consent-marketing"><span><strong>Marketing (Meta Pixel)</strong>Zeigt mir, ob meine Anzeigen Dich erreichen.</span></label>
+  </div>
   <div class="consent__actions">
-    <button type="button" class="btn btn--ghost js-consent-deny">Nur notwendige</button>
-    <button type="button" class="btn btn--small js-consent-accept">Alle akzeptieren</button>
+    <button type="button" class="btn btn--ghost js-consent-settings">Einstellungen</button>
+    <button type="button" class="btn btn--small js-consent-accept">Akzeptieren</button>
   </div>
 </div>
 

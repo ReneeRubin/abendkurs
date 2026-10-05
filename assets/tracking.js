@@ -82,22 +82,43 @@
   function hasConsent() { return safeGet("localStorage", CONFIG.consentKey) === "all"; }
   function consentDecided() { return !!safeGet("localStorage", CONFIG.consentKey); }
 
+  // Marketing-Häkchen in den Einstellungen vorausgewählt? Rechtlich gilt ein
+  // vorausgewähltes Häkchen nicht als wirksame Einwilligung (EuGH Planet49).
+  var PRESELECT_MARKETING = false;
+
   function setupConsent() {
     var box = document.getElementById("consent");
     if (!box) return;
-    var show = function () { box.hidden = false; };
+    var settings = document.getElementById("consent-settings");
+    var marketing = document.getElementById("consent-marketing");
+    var settingsBtn = box.querySelector(".js-consent-settings");
+    var show = function () {
+      box.hidden = false;
+      if (settings) settings.hidden = true;
+      if (settingsBtn) settingsBtn.textContent = "Einstellungen";
+    };
     var hide = function () { box.hidden = true; };
-
-    if (!consentDecided()) show();
-
-    box.querySelector(".js-consent-accept").addEventListener("click", function () {
+    var grant = function () {
       safeSet("localStorage", CONFIG.consentKey, "all");
       hide();
       loadPixel();
       trackLeadOnce();
       document.dispatchEvent(new CustomEvent("ak:consent"));
-    });
-    box.querySelector(".js-consent-deny").addEventListener("click", function () {
+    };
+
+    if (!consentDecided()) show();
+
+    box.querySelector(".js-consent-accept").addEventListener("click", grant);
+    if (settingsBtn) settingsBtn.addEventListener("click", function () {
+      if (settings && settings.hidden) {
+        // 1. Klick: Einstellungen aufklappen
+        settings.hidden = false;
+        if (marketing) marketing.checked = hasConsent() || PRESELECT_MARKETING;
+        settingsBtn.textContent = "Auswahl speichern";
+        return;
+      }
+      // 2. Klick: Auswahl speichern
+      if (marketing && marketing.checked) return grant();
       safeSet("localStorage", CONFIG.consentKey, "necessary");
       hide();
     });
