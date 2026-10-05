@@ -359,3 +359,4 @@ h2 { text-wrap: balance; }
 .consent__opt input { width: 20px; height: 20px; margin: 2px 0 0; accent-color: var(--petrol); }
 .consent__opt strong { display: block; color: var(--ink); }
 .consent__opt span { font-size: .85rem; color: var(--muted); line-height: 1.4; }
+.keys__claim { font-size: 1.15em; color: var(--petrol-deep); margin-top: 1.4em; }
