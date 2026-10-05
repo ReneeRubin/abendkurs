@@ -209,7 +209,9 @@ h2 { text-wrap: balance; }
 .voice { margin: 32px 0; background: #fff; border-radius: var(--radius); padding: 30px 24px 22px; border: 1px solid var(--line); position: relative; text-align: left; }
 .voice::before { content: "“"; position: absolute; top: -4px; left: 18px; font-family: var(--font-head); font-size: 5rem; color: var(--blau); line-height: 1; }
 .voice blockquote { margin: 14px 0 12px; font-family: var(--font-head); font-size: 1.45rem; line-height: 1.4; color: var(--ink); }
-.voice figcaption { font-size: .9rem; color: var(--muted); font-weight: 700; }
+.voice figcaption { font-size: .9rem; color: var(--muted); font-weight: 700; display: flex; align-items: center; gap: 12px; }
+.voice__img { width: 56px; height: 56px; border-radius: 50%; object-fit: cover; border: 2px solid var(--blau); flex: none; }
+.lorenza__img { display: block; width: 112px; height: 112px; margin: 0 auto 16px; border-radius: 50%; object-fit: cover; border: 3px solid var(--blau); }
 .voice--onDark { background: rgba(255,255,255,.08); border-color: rgba(255,255,255,.22); }
 .voice--onDark blockquote { color: #fff; }
 .voice--onDark figcaption { color: var(--blau); }
