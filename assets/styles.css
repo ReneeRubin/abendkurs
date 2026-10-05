@@ -390,3 +390,5 @@ h2 { text-wrap: balance; }
 .hero__eyebrow::before { display: none; }
 .hero__eyebrow strong { display: block; margin-top: 2px; font-size: 1.15rem; color: var(--pink); }
 @media (max-width: 420px) { .hero__eyebrow span { font-size: .86rem; } }
+.hero__eyebrow strong { display: inline-block; margin-top: 10px; padding: 6px 18px; border-radius: 999px; background: var(--petrol); color: #fff; font-family: var(--font-head); font-size: clamp(1.35rem, 4.6vw, 1.6rem); font-weight: 600; letter-spacing: .01em; line-height: 1.25; box-shadow: 0 6px 18px rgba(63, 95, 108, .22); }
+@media (max-width: 420px) { .hero__eyebrow { margin-bottom: 6px; } .hero__eyebrow strong { margin-top: 8px; padding: 4px 16px; } .hero { padding-top: 14px; } }
