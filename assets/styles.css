@@ -381,3 +381,8 @@ h2 { text-wrap: balance; }
 .whatif li::before { content: "…"; position: absolute; left: 16px; top: 12px; color: var(--pink); font-style: normal; }
 @media (max-width: 420px) { .gains li { padding: 72px 18px 18px; } .gains li::before { top: 18px; left: 18px; } }
 .compass span strong { font-family: inherit; font-size: inherit; font-weight: 700; color: inherit; }
+.petrol-lines { line-height: 1.5; }
+.you-are--detail { gap: 14px; margin: 1.6em 0; }
+.you-are--detail li { font-family: inherit; font-size: inherit; line-height: 1.5; padding: 14px 18px; border-left: 3px solid var(--blau); background: rgba(255,255,255,.08); border-radius: 0 12px 12px 0; }
+.you-are--detail strong { display: block; font-family: var(--font-head); font-size: clamp(1.35rem, 4vw, 1.6rem); font-weight: 600; line-height: 1.25; margin-bottom: 4px; color: #fff; }
+.you-are--detail span { color: rgba(255,255,255,.9); }
