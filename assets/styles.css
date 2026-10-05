@@ -113,6 +113,11 @@ h2 { text-wrap: balance; }
 
 /* ---------- Hero ---------- */
 .hero { padding: 22px 0 48px; background: linear-gradient(180deg, var(--blau-soft) 0%, #fff 78%); }
+.logos { padding: 8px 0 36px; background: #fff; text-align: center; }
+.logos__label { margin: 0 0 14px; font-size: .9rem; color: var(--muted); letter-spacing: .04em; }
+.logos__list { list-style: none; margin: 0; padding: 0; display: flex; justify-content: center; align-items: center; gap: clamp(28px, 8vw, 64px); flex-wrap: wrap; }
+.logos__list img { height: 56px; width: auto; display: block; }
+@media (min-width: 760px) { .logos__list img { height: 64px; } }
 .hero .eyebrow { margin-bottom: 12px; }
 .hero h1 { margin-bottom: .4em; }
 .hero .lead { margin-bottom: 18px; }
