@@ -104,9 +104,9 @@
     vorname.value = vorname.value.trim();
     email.value = email.value.trim();
 
-    if (!vorname.value) return setError("Bitte gib deinen Vornamen ein.", vorname);
-    if (!EMAIL_RE.test(email.value)) return setError("Bitte prüfe deine E-Mail-Adresse.", email);
-    if (!optin.checked) return setError("Bitte bestätige die Einwilligung, damit ich dir die Kursinformationen schicken darf.", optin);
+    if (!vorname.value) return setError("Bitte gib Deinen Vornamen ein.", vorname);
+    if (!EMAIL_RE.test(email.value)) return setError("Bitte prüfe Deine E-Mail-Adresse.", email);
+    if (!optin.checked) return setError("Bitte bestätige die Einwilligung, damit ich Dir die Kursinformationen schicken darf.", optin);
     if (RECAPTCHA_SITEKEY) {
       if (captchaId === null) { loadCaptcha(); return setError("Einen Moment bitte, die Sicherheitsabfrage lädt noch."); }
       if (!window.grecaptcha.getResponse(captchaId)) return setError("Bitte bestätige kurz die Sicherheitsabfrage („Ich bin kein Roboter“).");
