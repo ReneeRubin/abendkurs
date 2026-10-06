@@ -20,9 +20,7 @@
   <meta property="og:image:height" content="630">
 
   <link rel="icon" href="/assets/img/favicon.svg" type="image/svg+xml">
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Allura&family=Cormorant+Garamond:ital,wght@0,500;0,600;1,500;1,600&family=Questrial&display=swap">
+  <link rel="stylesheet" href="/assets/fonts.css">
   <link rel="stylesheet" href="/assets/styles.css">
   <link rel="preload" as="image" href="/assets/img/renee-hero.jpg" media="(min-width: 900px)">
 </head>
@@ -406,7 +404,7 @@
           </div>
           <div class="field field--check">
             <input id="f-optin" name="OPT_IN" type="checkbox" value="1" required>
-            <label for="f-optin">Ich möchte meinen Platz kostenfrei reservieren, Informationen per E-Mail erhalten und akzeptiere die <a href="https://mein.rueckenbewusst-sein.de/datenschutzerklaerung/" target="_blank" rel="noopener">Datenschutzerklärung</a>.</label>
+            <label for="f-optin">Ich möchte meinen Platz kostenfrei reservieren, Informationen per E-Mail erhalten und akzeptiere die <a href="/datenschutz/" target="_blank" rel="noopener">Datenschutzerklärung</a>.</label>
           </div>
           <!-- reCAPTCHA aus dem Brevo-Formular; wird erst bei Interaktion geladen (siehe main.js) -->
           <div class="field field--captcha" id="f-captcha" hidden></div>
@@ -478,8 +476,8 @@
   <div class="wrap">
     <p class="footer__disclaimer">Der Abendkurs vermittelt einen ganzheitlichen Ansatz zur Betrachtung des eigenen Rückenproblems und ersetzt keine medizinische Diagnose oder Behandlung. Die Stimmen auf dieser Seite sind Auszüge aus persönlichen Rückmeldungen und individuelle Erfahrungen.</p>
     <nav class="footer__links" aria-label="Rechtliches">
-      <a href="https://mein.rueckenbewusst-sein.de/impressum">Impressum</a>
-      <a href="https://mein.rueckenbewusst-sein.de/datenschutzerklaerung/">Datenschutz</a>
+      <a href="/impressum/">Impressum</a>
+      <a href="/datenschutz/">Datenschutz</a>
       <button type="button" class="linklike js-consent-open">Cookie-Einstellungen</button>
     </nav>
     <p class="footer__copy">© <span class="js-year">2026</span> RückenbewusstSEIN</p>
@@ -489,15 +487,15 @@
 <a class="stickycta" href="#anmeldung" data-cta="sticky" aria-hidden="true" tabindex="-1">Ja, ich bin kostenfrei dabei</a>
 
 <div class="consent" id="consent" hidden role="dialog" aria-labelledby="consent-title" aria-modal="false">
-  <p id="consent-title" class="consent__title">Darf ich Cookies verwenden?</p>
-  <p>Ich nutze den Meta Pixel, um zu verstehen, ob meine Anzeigen Dich erreichen. Das geschieht nur mit Deiner Zustimmung. Mehr in der <a href="https://mein.rueckenbewusst-sein.de/datenschutzerklaerung/" target="_blank" rel="noopener">Datenschutzerklärung</a>.</p>
+  <p id="consent-title" class="consent__title">Darf ich Deine Kekse lesen?</p>
+  <p>Ich nutze den Meta Pixel, um zu verstehen, wie meine Anzeigen Dich erreichen. Für Dich ein kleiner Klick, für mich sehr viel wert. Das geschieht nur mit Deiner Zustimmung. Mehr in der <a href="/datenschutz/" target="_blank" rel="noopener">Datenschutzerklärung</a>.</p>
   <div class="consent__settings" id="consent-settings" hidden>
     <label class="consent__opt"><input type="checkbox" checked disabled><span><strong>Notwendig</strong>Speichert Deine Cookie-Auswahl. Immer aktiv.</span></label>
     <label class="consent__opt" for="consent-marketing"><input type="checkbox" id="consent-marketing"><span><strong>Marketing (Meta Pixel)</strong>Zeigt mir, ob meine Anzeigen Dich erreichen.</span></label>
   </div>
   <div class="consent__actions">
     <button type="button" class="btn btn--ghost js-consent-settings">Einstellungen</button>
-    <button type="button" class="btn btn--small js-consent-accept">Akzeptieren</button>
+    <button type="button" class="btn btn--small js-consent-accept">Zustimmen</button>
   </div>
 </div>
 

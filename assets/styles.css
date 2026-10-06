@@ -492,3 +492,11 @@ h2 { text-wrap: balance; }
 }
 .about__head .eyebrow { justify-content: center; text-align: center; }
 .thanks__next { margin: 28px 0 0; font-family: var(--font-head); font-size: 1.35rem; font-weight: 600; color: var(--petrol-deep); }
+
+/* Rechtliches */
+.legal h1 { font-size: clamp(2rem, 6vw, 2.6rem); }
+.legal h2 { font-size: 1.45rem; margin-top: 1.6em; }
+.legal p { overflow-wrap: anywhere; }
+.legal .linklike { color: var(--petrol); text-decoration: underline; font: inherit; }
+.legal__home { text-decoration: none; }
+.legal__back { margin-top: 2.4em; }
