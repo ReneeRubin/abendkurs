@@ -474,3 +474,5 @@ h2 { text-wrap: balance; }
 @media (max-width: 420px) { .herofacts { font-size: 1.05rem; gap: 6px; } .hero .lead { margin-bottom: 14px; } .hero h1 { margin-bottom: .3em; } }
 @media (max-width: 360px) { .brand__name { font-size: .98rem; } .brand__small { font-size: .82rem; } .topbar__cta { font-size: .9rem; padding: 6px 10px; } }
 .hero__eyebrow span { display: block; text-wrap: balance; }
+.story { margin: 1.4em 0; padding: 4px 0 4px 20px; border-left: 3px solid var(--pink); }
+.story__title { font-family: var(--font-head); font-size: 1.5rem; font-weight: 600; line-height: 1.25; color: var(--petrol-deep); margin-bottom: .4em; }
