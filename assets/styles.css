@@ -491,3 +491,4 @@ h2 { text-wrap: balance; }
   .about__image img { max-width: 100%; aspect-ratio: 4 / 4.2; }
 }
 .about__head .eyebrow { justify-content: center; text-align: center; }
+.thanks__next { margin: 28px 0 0; font-family: var(--font-head); font-size: 1.35rem; font-weight: 600; color: var(--petrol-deep); }
