@@ -500,3 +500,25 @@ h2 { text-wrap: balance; }
 .legal .linklike { color: var(--petrol); text-decoration: underline; font: inherit; }
 .legal__home { text-decoration: none; }
 .legal__back { margin-top: 2.4em; }
+
+/* VIP-Dankesseite */
+.vip-hero { min-height: 0; padding: 56px 0 48px; }
+.vip-hero__ask { margin: 24px 0 18px; font-size: 1.15rem; }
+.vip-card { position: relative; background: #fff; border: 2px solid var(--pink); border-radius: var(--radius); padding: 36px 22px 26px; box-shadow: var(--shadow); }
+.vip-card__badge { position: absolute; top: -15px; left: 50%; transform: translateX(-50%); margin: 0; background: var(--pink); color: #fff; font-weight: 700; font-size: .9rem; letter-spacing: .04em; padding: 4px 16px; border-radius: 999px; }
+.vip-card h2 { text-align: center; }
+.vip-list { list-style: none; padding: 0; margin: 24px 0; display: grid; gap: 16px; }
+.vip-list li { position: relative; padding-left: 38px; }
+.vip-list li::before { content: "✓"; position: absolute; left: 0; top: 1px; width: 26px; height: 26px; border-radius: 50%; background: var(--blau-soft); color: var(--petrol-deep); font-weight: 700; display: grid; place-items: center; font-size: .9rem; }
+.vip-list strong { display: block; color: var(--petrol-deep); }
+.vip-price { text-align: center; margin: 8px 0 16px; }
+.vip-price__amount { margin: 0; font-family: var(--font-head); font-size: 3rem; font-weight: 600; line-height: 1; color: var(--petrol-deep); }
+.vip-price__note { margin: 6px 0 0; color: var(--muted); }
+.vip-card__fine { margin: 12px 0 0; text-align: center; color: var(--muted); font-size: 1rem; }
+.vip-compare { display: grid; margin: 24px 0 0; background: #fff; border-radius: var(--radius); overflow: hidden; border: 1px solid var(--line); }
+.vip-compare__row { display: grid; grid-template-columns: minmax(0,1.5fr) minmax(0,1fr) minmax(0,1fr); gap: 8px; padding: 12px 14px; border-top: 1px solid var(--line); align-items: center; }
+.vip-compare__row span:not(:first-child) { text-align: center; }
+.vip-compare__row span:last-child { color: var(--petrol-deep); font-weight: 700; }
+.vip-compare__head { border-top: 0; background: var(--petrol); color: #fff; font-weight: 700; }
+.vip-compare__head span:last-child { color: #fff; }
+@media (min-width: 760px) { .vip-card { padding: 44px 44px 32px; } }
