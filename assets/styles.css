@@ -443,3 +443,7 @@ h2 { text-wrap: balance; }
 .scene-photo img { display: block; width: 100%; height: auto; border-radius: var(--radius); box-shadow: var(--shadow); background: #fff; }
 .vcard--todo blockquote { color: var(--muted); font-style: italic; }
 .takeaway p:last-child, .bonus ul { margin-bottom: 0; }
+.brand--course { display: flex; flex-direction: column; line-height: 1.15; letter-spacing: 0; }
+.brand__small { font-size: .78rem; font-weight: 700; color: var(--pink); letter-spacing: .02em; }
+.brand__name { font-family: var(--font-head); font-size: 1.25rem; font-weight: 600; color: var(--petrol-deep); }
+@media (max-width: 400px) { .brand__name { font-size: 1.08rem; } .topbar__cta { padding: 6px 12px; } }
