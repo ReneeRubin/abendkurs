@@ -438,7 +438,8 @@ h2 { text-wrap: balance; }
 .journey > li:last-child::after { bottom: -6px; }
 .journey::after { content: ""; display: block; width: 14px; height: 14px; margin: 0 0 0 11px; border-radius: 50%; background: var(--pink); }
 .journey__agenda { margin-bottom: 0; }
-.scene-photo { margin: 8px auto 28px; max-width: 400px; }
+.scene-photo { margin: 8px auto 28px; max-width: 240px; }
+@media (min-width: 760px) { .scene-photo { max-width: 280px; } }
 .scene-photo img { display: block; width: 100%; height: auto; border-radius: var(--radius); box-shadow: var(--shadow); background: #fff; }
 .vcard--todo blockquote { color: var(--muted); font-style: italic; }
 .takeaway p:last-child, .bonus ul { margin-bottom: 0; }
