@@ -476,3 +476,18 @@ h2 { text-wrap: balance; }
 .hero__eyebrow span { display: block; text-wrap: balance; }
 .story { margin: 1.4em 0; padding: 4px 0 4px 20px; border-left: 3px solid var(--pink); }
 .story__title { font-family: var(--font-head); font-size: 1.5rem; font-weight: 600; line-height: 1.25; color: var(--petrol-deep); margin-bottom: .4em; }
+
+/* Über mich: zwei Spalten */
+.about__head { max-width: 760px; margin: 0 auto 28px; text-align: center; }
+.about { align-items: start; }
+.about__left .about__image { margin-bottom: 28px; }
+.about__right .approach { margin: 0 0 1.4em; padding: 20px 22px; background: var(--blau-soft); border-radius: 16px; }
+.about__right .approach p:last-child { margin-bottom: 0; }
+.about__right .combo { margin-top: 0; }
+.about__foot { max-width: 760px; margin: 36px auto 0; }
+.about__foot .cta { text-align: center; }
+@media (min-width: 900px) {
+  .about { grid-template-columns: 1fr 1fr; gap: 56px; }
+  .about__image img { max-width: 100%; aspect-ratio: 4 / 4.2; }
+}
+.about__head .eyebrow { justify-content: center; text-align: center; }
