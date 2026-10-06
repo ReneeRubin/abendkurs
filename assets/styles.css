@@ -538,3 +538,7 @@ h2 { text-wrap: balance; }
 .vip-feat strong { margin: 0; }
 .vip-feat span:last-child { grid-column: 1 / -1; }
 .vip-feat > .vip-feat__icon { grid-column: 1; }
+.thanks__photo { width: 200px; height: 200px; border-radius: 50%; object-fit: cover; object-position: 50% 22%; margin: 0 auto 24px; border: 5px solid #fff; box-shadow: var(--shadow); display: block; }
+@media (min-width: 760px) { .thanks__photo { width: 240px; height: 240px; } }
+.vip-card .eyebrow { margin-bottom: 6px; }
+.vip-card__intro { margin: 0 0 .8em; }
