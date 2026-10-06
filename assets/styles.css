@@ -447,3 +447,30 @@ h2 { text-wrap: balance; }
 .brand__small { font-size: .78rem; font-weight: 700; color: var(--pink); letter-spacing: .02em; }
 .brand__name { font-family: var(--font-head); font-size: 1.25rem; font-weight: 600; color: var(--petrol-deep); }
 @media (max-width: 400px) { .brand__name { font-size: 1.08rem; } .topbar__cta { padding: 6px 12px; } }
+
+/* Lesbarkeit (Renée, 06.10.): nichts unter 16px, kleine Überschriften deutlich abgesetzt */
+:root { --muted: #4f6168; }
+.topbar__cta { font-size: 1rem; }
+.brand__small { font-size: .9rem; }
+.eyebrow { font-size: 1.05rem; }
+.hero__eyebrow span { font-size: 1rem; }
+.herofacts { font-size: 1.1rem; }
+.trust { font-size: 1rem; }
+.cta__sub { font-size: 1rem; }
+.logos__label { font-size: 1rem; }
+.small { font-size: 1rem; }
+.voice figcaption, .vcard figcaption, .lorenza__name { font-size: 1rem; }
+.journey__day { font-size: 1.05rem; }
+.takeaway__label, .bonus__label { font-size: 1rem; }
+.facts dt { font-size: 1.05rem; }
+.field label { font-size: 1.05rem; }
+.field--check label { font-size: 1rem; }
+.form__hint { font-size: 1rem; }
+.footer { font-size: 1rem; }
+.consent p, .consent__opt span { font-size: 1rem; }
+.combo__title { font-family: var(--font-head); font-size: 1.35rem; font-weight: 600; line-height: 1.25; color: var(--petrol-deep); margin-bottom: 8px !important; padding-bottom: 8px; border-bottom: 2px solid var(--blau); }
+@media (max-width: 420px) { .hero__eyebrow span { font-size: .92rem; } }
+.consent .btn { font-size: 1rem; }
+@media (max-width: 420px) { .herofacts { font-size: 1.05rem; gap: 6px; } .hero .lead { margin-bottom: 14px; } .hero h1 { margin-bottom: .3em; } }
+@media (max-width: 360px) { .brand__name { font-size: .98rem; } .brand__small { font-size: .82rem; } .topbar__cta { font-size: .9rem; padding: 6px 10px; } }
+.hero__eyebrow span { display: block; text-wrap: balance; }
