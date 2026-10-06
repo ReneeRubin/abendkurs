@@ -116,8 +116,8 @@ h2 { text-wrap: balance; }
 .logos { padding: 8px 0 36px; background: #fff; text-align: center; }
 .logos__label { margin: 0 0 14px; font-size: .9rem; color: var(--muted); letter-spacing: .04em; }
 .logos__list { list-style: none; margin: 0; padding: 0; display: flex; justify-content: center; align-items: center; gap: clamp(28px, 8vw, 64px); flex-wrap: wrap; }
-.logos__list img { height: 56px; width: auto; display: block; }
-@media (min-width: 760px) { .logos__list img { height: 64px; } }
+.logos__list img { height: clamp(80px, 21vw, 112px); width: auto; display: block; }
+@media (min-width: 760px) { .logos__list img { height: 128px; } }
 .hero .eyebrow { margin-bottom: 12px; }
 .hero h1 { margin-bottom: .4em; }
 .hero .lead { margin-bottom: 18px; }
@@ -190,13 +190,13 @@ h2 { text-wrap: balance; }
 
 /* ---------- Drei Abende ---------- */
 .journey { list-style: none; padding: 0; margin: 32px 0; display: grid; gap: 0; }
-.journey li { position: relative; padding: 0 0 28px 44px; }
-.journey li::before { content: ""; position: absolute; left: 7px; top: 7px; width: 20px; height: 20px; border-radius: 50%; background: var(--blau); border: 3px solid #fff; box-shadow: 0 0 0 1.5px var(--blau); z-index: 1; }
-.journey li:not(:last-child)::after { content: ""; position: absolute; left: 17px; top: 30px; bottom: 0; width: 2px; background: var(--pink); }
+.journey > li { position: relative; padding: 0 0 28px 44px; }
+.journey > li::before { content: ""; position: absolute; left: 7px; top: 7px; width: 20px; height: 20px; border-radius: 50%; background: var(--blau); border: 3px solid #fff; box-shadow: 0 0 0 1.5px var(--blau); z-index: 1; }
+.journey > li:not(:last-child)::after { content: ""; position: absolute; left: 17px; top: 30px; bottom: 0; width: 2px; background: var(--pink); }
 .journey__day { margin: 0 0 2px; font-size: .95rem; font-weight: 700; letter-spacing: .02em; color: var(--petrol); }
 .journey h3 { margin: 0 0 .2em; font-size: clamp(1.9rem, 5vw, 2.3rem); }
 .journey__q { font-family: var(--font-head); font-style: italic; font-size: 1.35rem; line-height: 1.3; color: var(--ink); margin-bottom: .4em; }
-.journey li p:last-child { margin: 0; color: var(--muted); }
+.journey > li > p:last-child { margin: 0; color: var(--muted); }
 
 /* ---------- About ---------- */
 .about { display: grid; gap: 32px; align-items: center; }
@@ -392,3 +392,45 @@ h2 { text-wrap: balance; }
 @media (max-width: 420px) { .hero__eyebrow span { font-size: .86rem; } }
 .hero__eyebrow strong { display: inline-block; margin-top: 10px; padding: 6px 18px; border-radius: 999px; background: var(--petrol); color: #fff; font-family: var(--font-head); font-size: clamp(1.35rem, 4.6vw, 1.6rem); font-weight: 600; letter-spacing: .01em; line-height: 1.25; box-shadow: 0 6px 18px rgba(63, 95, 108, .22); }
 @media (max-width: 420px) { .hero__eyebrow { margin-bottom: 6px; } .hero__eyebrow strong { margin-top: 8px; padding: 4px 16px; } .hero { padding-top: 14px; } }
+
+/* Abende: mitnehmen + Bonus */
+.takeaway { margin: 16px 0 0; padding: 16px 18px; background: #fff; border: 1px solid var(--line); border-radius: 14px; }
+.takeaway__label, .bonus__label { margin: 0 0 4px; font-size: .85rem; font-weight: 700; letter-spacing: .04em; color: var(--petrol); }
+.takeaway__h { margin: 0 0 .3em; font-family: var(--font-head); font-size: 1.35rem; font-weight: 600; line-height: 1.3; color: var(--petrol-deep); }
+.journey li .takeaway p:last-child { color: var(--ink); }
+.bonus { position: relative; margin: 12px 0 0; padding: 14px 18px 14px; border-radius: 14px; background: linear-gradient(135deg, #fff0f8 0%, #fff 70%); border: 1.5px dashed var(--pink); }
+.bonus__icon { float: left; margin: -2px 10px 0 0; width: 28px; height: 28px; fill: none; stroke: var(--pink); stroke-width: 1.6; stroke-linejoin: round; stroke-linecap: round; }
+.bonus__label { color: var(--pink); }
+.bonus ul { list-style: none; margin: 0; padding: 0; display: grid; gap: 6px; }
+.bonus li { position: relative; padding-left: 22px; font-weight: 700; color: var(--petrol-deep); line-height: 1.4; }
+.bonus li::before { content: "✦"; position: absolute; left: 0; color: var(--pink); font-weight: 400; }
+/* Was wäre, wenn: leserlicher */
+.whatif li { font-family: var(--font-body); font-style: normal; font-size: 1.08rem; line-height: 1.5; color: var(--ink); padding: 16px 18px 16px 46px; }
+.whatif li::before { top: 13px; font-size: 1.3rem; font-weight: 700; }
+/* Szenenbild */
+.scene-art { margin: 8px 0 28px; }
+.scene-art svg { display: block; width: 100%; height: auto; max-width: 560px; margin: 0 auto; }
+.sa-wall { fill: #fff; }
+.sa-window { fill: var(--blau-soft); stroke: var(--petrol); stroke-width: 3; }
+.sa-sun { fill: #ffd6ec; stroke: var(--pink); stroke-width: 3; }
+.sa-hill { fill: var(--blau); opacity: .55; }
+.sa-frame, .sa-hand, .sa-leg, .sa-steam, .sa-note path { fill: none; stroke: var(--petrol); stroke-width: 3; stroke-linecap: round; }
+.sa-bed { fill: var(--petrol); }
+.sa-blanket { fill: var(--blau); }
+.sa-pillow { fill: #fff; stroke: var(--petrol); stroke-width: 3; }
+.sa-table { fill: var(--petrol-deep); }
+.sa-clock { fill: #fff; stroke: var(--pink); stroke-width: 3; }
+.sa-cup { fill: #fff; stroke: var(--petrol); stroke-width: 3; }
+.sa-note rect { fill: #fff8d6; stroke: var(--petrol); stroke-width: 3; }
+.sa-steam { stroke: var(--blau); }
+/* Stimmen unter dem Formular */
+.voices { margin-top: 56px; }
+.voices__title { margin-bottom: 20px; }
+.voices__row { display: grid; grid-auto-flow: column; grid-auto-columns: minmax(260px, 82%); gap: 16px; overflow-x: auto; scroll-snap-type: x mandatory; padding: 4px 4px 16px; -webkit-overflow-scrolling: touch; }
+.vcard { scroll-snap-align: start; margin: 0; background: #fff; border: 1px solid var(--line); border-radius: var(--radius); padding: 22px 20px; display: flex; flex-direction: column; align-items: center; text-align: center; gap: 12px; box-shadow: var(--shadow); }
+.vcard img { width: 72px; height: 72px; border-radius: 50%; object-fit: cover; border: 3px solid var(--blau); }
+.vcard blockquote { margin: 0; font-family: var(--font-head); font-size: 1.3rem; line-height: 1.35; color: var(--ink); flex: 1; }
+.vcard figcaption { font-size: .9rem; font-weight: 700; color: var(--muted); }
+@media (min-width: 900px) { .voices__row { grid-auto-flow: row; grid-template-columns: repeat(4, 1fr); overflow: visible; } }
+.bonus__label { line-height: 28px; margin-bottom: 8px; }
+@media (max-width: 420px) { .journey > li { padding-left: 36px; } .takeaway, .bonus { margin-left: -6px; } }
