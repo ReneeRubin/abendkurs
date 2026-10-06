@@ -542,3 +542,6 @@ h2 { text-wrap: balance; }
 @media (min-width: 760px) { .thanks__photo { width: 240px; height: 240px; } }
 .vip-card .eyebrow { margin-bottom: 6px; }
 .vip-card__intro { margin: 0 0 .8em; }
+.vip-price__value { margin: 0 0 4px; color: var(--muted); }
+.vip-price__value span { font-weight: 700; color: var(--petrol-deep); }
+.vip-price__for { margin: 0 0 6px; font-weight: 700; color: var(--pink); letter-spacing: .02em; }
