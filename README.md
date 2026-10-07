@@ -39,8 +39,9 @@ Online-Abendkurs. Einziges Ziel: Anmeldung über das bestehende Brevo-Formular.
    kein Google-Skript). Dann in `assets/main.js` `RECAPTCHA_SITEKEY = ""` setzen.
    Bleibt es an, muss reCAPTCHA in der Datenschutzerklärung stehen.
 2. Datenschutzerklärung um Meta Pixel und Cookie-Einwilligung ergänzen.
-3. Cloudflare Pages: Projekt mit diesem Repo verbinden, Build-Befehl leer,
-   Ausgabeverzeichnis `/`. Danach Subdomain (z. B.
+3. Cloudflare: Worker mit diesem Repo verbinden (Build-Befehl leer, Deploy-Befehl
+   `npx wrangler deploy`). `wrangler.jsonc` liefert die Dateien als statische Seite aus,
+   `.assetsignore` hält README und Konfiguration draußen. Danach Subdomain (z. B.
    `abendkurs.rueckenbewusst-sein.de`) per CNAME bei Alfahosting eintragen
    und die `og:image`-URL in `index.html` darauf anpassen.
 4. Testanmeldung: Danke-Seite `/ty1/` erscheint, im Meta Events Manager
