@@ -547,3 +547,13 @@ h2 { text-wrap: balance; }
 .vip-price__for { margin: 0 0 6px; font-weight: 700; color: var(--pink); letter-spacing: .02em; }
 .thanks__photo--tall { width: min(280px, 72vw); height: auto; aspect-ratio: 600 / 768; border-radius: 28px; object-position: 50% 30%; }
 @media (min-width: 760px) { .thanks__photo--tall { width: 320px; height: auto; } }
+.choice { display: grid; grid-template-columns: 1fr 1fr; gap: 12px; max-width: 420px; margin: 0 auto; }
+.choice__btn { flex-direction: column; gap: 2px; line-height: 1.15; padding-top: 12px; padding-bottom: 12px; }
+.choice__label { font-size: 1.15rem; letter-spacing: .04em; }
+.choice__price { font-size: .95rem; font-weight: 400; opacity: .95; }
+.vip-compare__head small { display: block; font-weight: 400; font-size: .85rem; opacity: .9; }
+/* VIP-Spalte ist jetzt die mittlere */
+.vip-compare__row span:last-child { color: inherit; font-weight: 400; }
+.vip-compare__row span:nth-child(2) { color: var(--petrol-deep); font-weight: 700; }
+.vip-compare__head span { color: #fff !important; }
+#vip, #basic { scroll-margin-top: 72px; }

@@ -28,7 +28,10 @@
       <h1>Dein Platz ist sicher!</h1>
       <p class="lead" style="margin:0 auto">Eine E-Mail mit allen Infos habe ich Dir gerade gesendet. Keine E-Mail da? Schau bitte auch im Spam- oder Werbe-Ordner nach.</p>
       <p class="vip-hero__ask">Eine Entscheidung noch: <strong>Wie intensiv möchtest Du dabei sein?</strong></p>
-      <a class="btn" href="#vip">Zum VIP-Paket</a>
+      <div class="choice">
+        <a class="btn choice__btn" href="#vip"><span class="choice__label">VIP</span><span class="choice__price">19,80&nbsp;€</span></a>
+        <a class="btn btn--petrol choice__btn" href="#basic"><span class="choice__label">Basic</span><span class="choice__price">0&nbsp;€</span></a>
+      </div>
     </div>
   </section>
 
@@ -64,16 +67,16 @@
 
   <section class="section section--soft">
     <div class="wrap narrow">
-      <h2 class="center">Kostenfrei oder VIP?</h2>
-      <div class="vip-compare" role="table" aria-label="Vergleich kostenfreier Platz und VIP-Paket">
-        <div class="vip-compare__row vip-compare__head" role="row"><span role="columnheader"></span><span role="columnheader">Kostenfrei</span><span role="columnheader">VIP</span></div>
-        <div class="vip-compare__row" role="row"><span role="cell">3 Live-Abende</span><span role="cell">Facebook</span><span role="cell">privater Zoom</span></div>
-        <div class="vip-compare__row" role="row"><span role="cell">Workbook</span><span role="cell">per WhatsApp</span><span role="cell">sofort</span></div>
-        <div class="vip-compare__row" role="row"><span role="cell">Bonus „Eskalationsstufen Rücken“</span><span role="cell" aria-label="nein">–</span><span role="cell">✓</span></div>
-        <div class="vip-compare__row" role="row"><span role="cell">Ursachenkompass</span><span role="cell" aria-label="nein">–</span><span role="cell">✓</span></div>
-        <div class="vip-compare__row" role="row"><span role="cell">BewusstSEINs-Guide (Hörerlebnis)</span><span role="cell" aria-label="nein">–</span><span role="cell">✓</span></div>
-        <div class="vip-compare__row" role="row"><span role="cell">Persönliches Gespräch, 40 Min.</span><span role="cell" aria-label="nein">–</span><span role="cell">✓</span></div>
-        <div class="vip-compare__row" role="row"><span role="cell">Premium Support</span><span role="cell" aria-label="nein">–</span><span role="cell">✓</span></div>
+      <h2 class="center">VIP oder Basic?</h2>
+      <div class="vip-compare" role="table" aria-label="Vergleich VIP-Paket und Basic-Platz">
+        <div class="vip-compare__row vip-compare__head" role="row"><span role="columnheader"></span><span role="columnheader">VIP<small>19,80&nbsp;€</small></span><span role="columnheader">Basic<small>0&nbsp;€</small></span></div>
+        <div class="vip-compare__row" role="row"><span role="cell">3 Live-Abende</span><span role="cell">privater Zoom</span><span role="cell">Facebook</span></div>
+        <div class="vip-compare__row" role="row"><span role="cell">Workbook</span><span role="cell">sofort</span><span role="cell">per WhatsApp</span></div>
+        <div class="vip-compare__row" role="row"><span role="cell">Bonus „Eskalationsstufen Rücken“</span><span role="cell">✓</span><span role="cell" aria-label="nein">–</span></div>
+        <div class="vip-compare__row" role="row"><span role="cell">Ursachenkompass</span><span role="cell">✓</span><span role="cell" aria-label="nein">–</span></div>
+        <div class="vip-compare__row" role="row"><span role="cell">BewusstSEINs-Guide (Hörerlebnis)</span><span role="cell">✓</span><span role="cell" aria-label="nein">–</span></div>
+        <div class="vip-compare__row" role="row"><span role="cell">Persönliches Gespräch, 40 Min.</span><span role="cell">✓</span><span role="cell" aria-label="nein">–</span></div>
+        <div class="vip-compare__row" role="row"><span role="cell">Premium Support</span><span role="cell">✓</span><span role="cell" aria-label="nein">–</span></div>
       </div>
       <div class="cta center">
         <a class="btn" href="https://www.checkout-ds24.com/product/734497" target="_blank" rel="noopener">VIP-Paket für 19,80 € sichern</a>
@@ -81,9 +84,9 @@
     </div>
   </section>
 
-  <section class="section">
+  <section class="section" id="basic">
     <div class="wrap narrow">
-      <h2>Du bleibst lieber beim kostenfreien Platz?</h2>
+      <h2>Du bleibst lieber beim Basic-Platz?</h2>
       <p>Auch gut, Du bist herzlich willkommen. Dann denk an diese zwei Schritte:</p>
       <ol class="steps">
         <li><strong>Bestelle kostenfrei Dein Workbook.</strong> Die Bestellung läuft ganz einfach über WhatsApp. Als VIP bekommst Du es direkt nach dem Kauf.
