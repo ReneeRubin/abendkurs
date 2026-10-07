@@ -6,3 +6,11 @@
   Cache-Control: public, max-age=86400
 /ty1/*
   X-Robots-Tag: noindex
+/variante-a*
+  X-Robots-Tag: noindex
+/vip/*
+  X-Robots-Tag: noindex
+/impressum/*
+  X-Robots-Tag: noindex
+/datenschutz/*
+  X-Robots-Tag: noindex

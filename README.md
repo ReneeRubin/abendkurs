@@ -7,7 +7,11 @@ Online-Abendkurs. Einziges Ziel: Anmeldung über das bestehende Brevo-Formular.
 
 | Datei | Zweck |
 | --- | --- |
-| `index.html` | Landingpage |
+| `index.html` | Landingpage (aktive Variante B) |
+| `variante-a.html` | Alte Variante A als Sicherung, noindex |
+| `impressum/`, `datenschutz/` | Rechtliches |
+| `vip/` | VIP-Angebotsseite (optional, gleiche Inhalte wie die Dankesseite) |
+| `assets/fonts/` | Schriften lokal, keine Google-Verbindung |
 | `ty1/index.html` | Danke-Seite, feuert den Meta-Lead einmal |
 | `assets/styles.css` | Design (Petrol, Mittelblau, Pink; Century Gothic/Questrial, Cormorant Garamond, Allura) |
 | `assets/tracking.js` | UTM sichern, Cookie-Einwilligung, Meta Pixel, Lead-Logik |
