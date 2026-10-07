@@ -545,3 +545,5 @@ h2 { text-wrap: balance; }
 .vip-price__value { margin: 0 0 4px; color: var(--muted); }
 .vip-price__value span { font-weight: 700; color: var(--petrol-deep); }
 .vip-price__for { margin: 0 0 6px; font-weight: 700; color: var(--pink); letter-spacing: .02em; }
+.thanks__photo--tall { width: min(280px, 72vw); height: auto; aspect-ratio: 600 / 768; border-radius: 28px; object-position: 50% 30%; }
+@media (min-width: 760px) { .thanks__photo--tall { width: 320px; height: auto; } }
