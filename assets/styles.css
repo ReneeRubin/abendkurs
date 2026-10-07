@@ -557,3 +557,4 @@ h2 { text-wrap: balance; }
 .vip-compare__row span:nth-child(2) { color: var(--petrol-deep); font-weight: 700; }
 .vip-compare__head span { color: #fff !important; }
 #vip, #basic { scroll-margin-top: 72px; }
+.consent__settings[hidden] { display: none; }
