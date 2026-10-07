@@ -89,6 +89,14 @@
     msg.textContent = "";
     Array.prototype.forEach.call(form.querySelectorAll("[aria-invalid]"), function (el) { el.removeAttribute("aria-invalid"); });
   }
+  // Unklare Antwort oder Netzwerk/CORS-Problem: ganz normal an Brevo senden, so wie Brevos eigenes
+  // Formular. Brevo leitet danach auf die in Brevo eingestellte Dankesseite (/ty1/) weiter.
+  function classicSubmit() {
+    var hpField = form.elements.ak_hp_x;
+    if (hpField) hpField.disabled = true;
+    window.AK && window.AK.markLeadPending();
+    form.submit();
+  }
   function goToThankYou() {
     window.AK && window.AK.markLeadPending();
     window.location.href = THANK_YOU_PATH + (window.AK ? window.AK.utmQuery() : "");
@@ -112,37 +120,34 @@
       if (!window.grecaptcha.getResponse(captchaId)) return setError("Bitte bestätige kurz die Sicherheitsabfrage („Ich bin kein Roboter“).");
     }
 
-    // Honeypot gefüllt = Bot: so tun als ob, nichts senden, keinen Lead zählen.
-    // Browser-Autofill trägt manchmal die eigene E-Mail ins versteckte Feld ein: das ist kein Bot.
-    var hp = form.elements.email_address_check;
-    if (hp.value && hp.value.trim().toLowerCase() === email.value.toLowerCase()) hp.value = "";
-    if (hp.value) { window.location.href = THANK_YOU_PATH; return; }
+    // Eigener Honeypot mit neutralem Namen (Browser-Autofill füllt ihn nicht aus).
+    // Gefüllt = Bot: nichts senden, keinen Lead zählen. Das Feld geht nie an Brevo.
+    var hp = form.elements.ak_hp_x;
+    if (hp && hp.value) { window.location.href = THANK_YOU_PATH; return; }
 
     var data = new FormData(form);
+    data.delete("ak_hp_x");
     button.disabled = true;
     button.textContent = "Einen Moment …";
 
     var url = form.action + (form.action.indexOf("?") === -1 ? "?" : "&") + "isAjax=1";
     fetch(url, { method: "POST", body: data, mode: "cors", credentials: "omit" })
       .then(function (res) {
-        return res.json().catch(function () { return { success: res.ok }; }).then(function (json) {
-          return { ok: res.ok, json: json };
-        });
+        return res.json().then(function (json) { return { ok: res.ok, json: json }; },
+                               function () { return { ok: res.ok, json: null }; });
       })
       .then(function (r) {
-        if (r.ok && r.json && r.json.success !== false) {
-          goToThankYou();
-        } else {
+        // Nur eine ausdrückliche Erfolgsmeldung von Brevo zählt als Anmeldung.
+        if (r.ok && r.json && r.json.success === true) return goToThankYou();
+        if (r.json && r.json.success === false) {
           button.disabled = false;
           button.textContent = buttonText;
-          setError("Deine Anmeldung konnte nicht gespeichert werden. Bitte versuche es erneut.");
+          setError("Deine Anmeldung konnte nicht gespeichert werden. Bitte prüfe Deine Angaben und versuche es erneut.");
           if (captchaId !== null) window.grecaptcha.reset(captchaId);
+          return;
         }
+        classicSubmit();
       })
-      .catch(function () {
-        // Netzwerk/CORS-Problem: klassisch an Brevo senden, damit die Anmeldung nie verloren geht.
-        // (Dann zeigt Brevo seine eigene Bestätigung; ein Lead wird in diesem Fall nicht gezählt.)
-        form.submit();
-      });
+      .catch(classicSubmit);
   });
 })();
