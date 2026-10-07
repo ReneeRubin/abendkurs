@@ -84,7 +84,7 @@
 
   // Marketing-Häkchen in den Einstellungen vorausgewählt? Rechtlich gilt ein
   // vorausgewähltes Häkchen nicht als wirksame Einwilligung (EuGH Planet49).
-  var PRESELECT_MARKETING = false;
+  var PRESELECT_MARKETING = true;
 
   function setupConsent() {
     var box = document.getElementById("consent");
