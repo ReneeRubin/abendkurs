@@ -558,3 +558,5 @@ h2 { text-wrap: balance; }
 .vip-compare__head span { color: #fff !important; }
 #vip, #basic { scroll-margin-top: 72px; }
 .consent__settings[hidden] { display: none; }
+a.brand--course { text-decoration: none; }
+a.brand--course:hover .brand__name { text-decoration: underline; text-underline-offset: 3px; }

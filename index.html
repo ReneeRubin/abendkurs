@@ -30,7 +30,7 @@
 
 <header class="topbar">
   <div class="wrap topbar__inner">
-    <span class="brand brand--course"><span class="brand__small">Abendkurs · 25.–27.10.2026</span><span class="brand__name">Rückenprobleme entschlüsseln</span></span>
+    <a class="brand brand--course" href="/" aria-label="Zur Startseite"><span class="brand__small">Abendkurs · 25.–27.10.2026</span><span class="brand__name">Rückenprobleme entschlüsseln</span></a>
     <a class="topbar__cta" href="#anmeldung" data-cta="header"><span class="hide-s">Kostenfrei </span>dabei sein</a>
   </div>
 </header>
@@ -409,7 +409,7 @@
           <!-- reCAPTCHA aus dem Brevo-Formular; wird erst bei Interaktion geladen (siehe main.js) -->
           <div class="field field--captcha" id="f-captcha" hidden></div>
           <!-- Brevo-Honeypot und Sprache, wie im Brevo-Embed -->
-          <input class="hp" type="text" name="email_address_check" value="" tabindex="-1" autocomplete="off" aria-hidden="true">
+          <input class="hp" type="text" name="email_address_check" value="" tabindex="-1" autocomplete="new-password" aria-hidden="true">
           <input type="hidden" name="locale" value="de">
           <button class="btn btn--block" type="submit">Ja, ich sichere mir meinen kostenfreien Platz</button>
           <p class="form__msg" role="alert" aria-live="polite"></p>

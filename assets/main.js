@@ -113,7 +113,10 @@
     }
 
     // Honeypot gefüllt = Bot: so tun als ob, nichts senden, keinen Lead zählen.
-    if (form.elements.email_address_check.value) { window.location.href = THANK_YOU_PATH; return; }
+    // Browser-Autofill trägt manchmal die eigene E-Mail ins versteckte Feld ein: das ist kein Bot.
+    var hp = form.elements.email_address_check;
+    if (hp.value && hp.value.trim().toLowerCase() === email.value.toLowerCase()) hp.value = "";
+    if (hp.value) { window.location.href = THANK_YOU_PATH; return; }
 
     var data = new FormData(form);
     button.disabled = true;
