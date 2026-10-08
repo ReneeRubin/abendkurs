@@ -6,13 +6,20 @@
   Cache-Control: public, max-age=86400
 /ty1/*
   X-Robots-Tag: noindex
+  Cache-Control: no-cache
 /variante-a*
   X-Robots-Tag: noindex
 /vip/*
   X-Robots-Tag: noindex
+  Cache-Control: no-cache
 /impressum/*
   X-Robots-Tag: noindex
 /datenschutz/*
   X-Robots-Tag: noindex
 /vip-danke/*
   X-Robots-Tag: noindex, nofollow
+  Cache-Control: no-cache
+/
+  Cache-Control: no-cache
+/index.html
+  Cache-Control: no-cache
