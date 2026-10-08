@@ -14,3 +14,5 @@
   X-Robots-Tag: noindex
 /datenschutz/*
   X-Robots-Tag: noindex
+/vip-danke/*
+  X-Robots-Tag: noindex, nofollow
