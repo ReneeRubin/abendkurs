@@ -142,7 +142,15 @@
         if (r.json && r.json.success === false) {
           button.disabled = false;
           button.textContent = buttonText;
-          setError("Deine Anmeldung konnte nicht gespeichert werden. Bitte prüfe Deine Angaben und versuche es erneut.");
+          // Brevos eigene Begründung mit anzeigen (z. B. welches Feld fehlt)
+          var detail = [];
+          if (r.json.message) detail.push(String(r.json.message));
+          if (r.json.errors && typeof r.json.errors === "object") {
+            Object.keys(r.json.errors).forEach(function (k) { detail.push(k + ": " + String(r.json.errors[k])); });
+          }
+          setError("Deine Anmeldung konnte nicht gespeichert werden. Bitte prüfe Deine Angaben und versuche es erneut." +
+                   (detail.length ? " (Brevo: " + detail.join(" · ") + ")" : ""));
+          if (window.console) console.warn("Brevo-Antwort:", r.json);
           if (captchaId !== null) window.grecaptcha.reset(captchaId);
           return;
         }
